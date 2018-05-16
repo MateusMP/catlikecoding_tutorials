@@ -5,19 +5,9 @@ using UnityEngine;
 
 public class FPSCounter : MonoBehaviour
 {
-    [System.Serializable]
-    private struct FPSColor
-    {
-        public Color color;
-        public int minimumFPS;
-    }
-
     public int avgFPS { get; private set; }
     public int maxFPS { get; private set; }
     public int minFPS { get; private set; }
-
-    [SerializeField]
-    private FPSColor[] coloring;
 
     public int frameRange = 60;
 
