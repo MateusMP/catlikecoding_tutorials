@@ -221,8 +221,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b206def41a09e4349a7d1199efbdeaca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4559260029525268, guid: 6eb89bab0075dfe449064dd51adc506d, type: 2}
+  prefab: {fileID: 114183628835375076, guid: 6eb89bab0075dfe449064dd51adc506d, type: 2}
   createKey: 99
+  newGameKey: 110
+  saveKey: 115
+  loadKey: 108
 --- !u!4 &995083375
 Transform:
   m_ObjectHideFlags: 0
