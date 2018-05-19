@@ -251,4 +251,25 @@ public class BezierSpline : MonoBehaviour
         }
     }
 
+    void OnDrawGizmos()
+    {
+        BezierSpline spline = this;
+        Transform handleTransform = spline.transform;
+
+        Vector3 p0 = handleTransform.TransformPoint(spline.GetControlPoint(0));
+        for (int i = 1; i < spline.ControlPointCount; i += 3)
+        {
+            Vector3 p1 = handleTransform.TransformPoint(spline.GetControlPoint((i)));
+            Vector3 p2 = handleTransform.TransformPoint(spline.GetControlPoint((i + 1)));
+            Vector3 p3 = handleTransform.TransformPoint(spline.GetControlPoint((i + 2)));
+
+            UnityEditor.Handles.color = Color.gray;
+            UnityEditor.Handles.DrawLine(p0, p1);
+            UnityEditor.Handles.DrawLine(p2, p3);
+
+            UnityEditor.Handles.DrawBezier(p0, p3, p1, p2, Color.white, null, 2f);
+            p0 = p3;
+        }
+    }
+
 }

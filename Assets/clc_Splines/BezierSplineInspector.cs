@@ -20,7 +20,7 @@ public class BezierSplineInspector : Editor
 
     private const int stepsPerCurve = 10;
 
-    private void OnSceneGUI()
+    public void OnSceneGUI()
     {
         spline = target as BezierSpline;
         handleTransform = spline.transform;

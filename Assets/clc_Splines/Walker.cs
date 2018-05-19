@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using UnityEngine;
-
 public class Walker : MonoBehaviour
 {
     public BezierSpline spline;
